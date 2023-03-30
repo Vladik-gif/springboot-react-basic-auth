@@ -25,14 +25,6 @@ public class MyUserDetailsEntity implements UserDetails {
                 .map(SimpleGrantedAuthority::new).collect(Collectors.toList());
     }
 
-    public List<GrantedAuthority> getGrantedAuthorities() {
-        return grantedAuthorities;
-    }
-
-    public void setGrantedAuthorities(List<GrantedAuthority> grantedAuthorities) {
-        this.grantedAuthorities = grantedAuthorities;
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return grantedAuthorities;
@@ -67,6 +59,4 @@ public class MyUserDetailsEntity implements UserDetails {
     public boolean isEnabled() {
         return active;
     }
-
-
 }
