@@ -24,7 +24,7 @@ public class MyUserDetailsService implements UserDetailsService {
         Optional<UserEntity> byUsername = userRepository.findByUsername(username);
 
         byUsername.orElseThrow(
-                ()  -> new UsernameNotFoundException("User name not")
+                ()  -> new UsernameNotFoundException(username + " not auth")
         );
 
         return byUsername.map(MyUserDetailsEntity::new).orElse(null);
