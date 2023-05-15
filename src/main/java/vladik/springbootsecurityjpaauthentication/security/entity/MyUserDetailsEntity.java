@@ -12,10 +12,10 @@ import java.util.stream.Collectors;
 
 public class MyUserDetailsEntity implements UserDetails {
 
-    private String userName;
-    private String password;
-    private boolean active;
-    private List<GrantedAuthority> grantedAuthorities;
+    private final String userName;
+    private final String password;
+    private final boolean active;
+    private final List<GrantedAuthority> grantedAuthorities;
 
     public MyUserDetailsEntity(UserEntity user) {
         this.userName = user.getUsername();
