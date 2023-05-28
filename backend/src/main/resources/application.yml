@@ -1,0 +1,15 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_security
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  app:
+    cors:
+      allowed-origins: http://localhost:3000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
